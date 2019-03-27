@@ -2,21 +2,18 @@
 using namespace std;
 int main() {
 	int N,i;
-	int ans = 0, p = 1;
 	cin>>N;
-	int A[N];
+	int num;
 	for(i=0;i<N;i++)
 	{
-	  cin>>A[i];
-	}
-	for(i=0;i<N;i++)
-    {
-        while(A[i] > 0)
+     cin>>num;
+     int ans = 0, p = 1;
+	 while(num > 0)
         {
-            int last_digit = A[i] % 10;
+            int last_digit = num % 10;
             ans = ans + last_digit*p;
             p = p*2;
-            A[i] = A[i] / 10;
+            num = num / 10;
         }
         cout<<ans<<endl;
 	}

@@ -9,11 +9,11 @@ int main()
     while(i<=rows)
     {
         int no;
-        if(i%2==1)
+        if(i%2==1) //if number of rows is odd
         {
             no=1;
         }
-        else
+        else // if number of rows is even
         {
             no=0;
         }

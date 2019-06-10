@@ -66,6 +66,7 @@ int main()
             {
                 ar[0][j]=1;
                 ar[i][0]=1;
+
             }
         }
         for(int i=0;i<m;i++)

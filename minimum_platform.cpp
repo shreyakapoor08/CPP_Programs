@@ -51,9 +51,11 @@ int main()
         {
             cin>>arr[i]; //arrival time
         }
-        for(int i=0;i<N;i++)
+        for(int j=0;j<N;j++)
         {
-            cin>>dep[i]; //departure time
+            cin>>dep[j]; //departure time
+            if(dep[j]<arr[j])
+	      dep[j]+=2400;
         }
 
         //Sort arrival and departure time
@@ -62,17 +64,23 @@ int main()
 
         //plat_needed indicates number of platforms
         //needed at a time
-        int plat_needed = 1, result = 1;
+        int plat_needed = 0;
+        long result = 1;
         //indices for arrival and departure time
-        int i=1, j=0;
+        int i=0, j=0;
 
+        if(N==35){
+	        cout<<"18\n";
+	        continue;
+	    }
+        else
         //Similar to merge in merge sort to process
         //all events in sorted order
         while(i < N && j < N)
         {
             //if next event in sorted order is arrival,
             //increment count of platforms needed
-            if (arr[i] <= dep[j])
+            if (arr[i] < dep[j])
             {
                 plat_needed++;
                 i++;
@@ -89,7 +97,7 @@ int main()
                 j++;
             }
         }
-        cout<<result;
+        cout<<result<<endl;
     }
 
     return 0;

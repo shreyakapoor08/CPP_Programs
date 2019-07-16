@@ -26,9 +26,22 @@ int main()
 {
 
     memset(dp,-1,sizeof(dp)); ///initializing using memset iski header file hoti hai cstring
-    int wines[] = {2,3,5,1,4};
-    int n = 5;
-    cout<<maxPrice(wines,0,n-1,1);
+    //int wines[] = {2,3,5,1,4};
+    //int n = 5;
+    //cout<<maxPrice(wines,0,n-1,1);
+
+    int wines[] = {2,6,3};
+    int n=3;
+    cout<<maxPrice(wines,0,n-1,1)<<endl;
+
+        for(int i=0;i<3;i++)
+        for(int j=0;j<3;j++)
+        {
+            {
+                cout<<dp[i][j]<<" ";
+            }
+            cout<<endl;
+        }
 
     return 0;
 }

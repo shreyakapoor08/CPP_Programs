@@ -10,6 +10,7 @@ int minCoins(int coins[], int m, int V)
    // Initialize result
    int res = INT_MAX;
 
+   ///
    // Try every coin that has smaller value than V
    for (int i=0; i<m; i++)
    {

@@ -46,8 +46,58 @@ void findType(int a[],int n)
     int i=0;
 
     //check if the array is in ascending order
-    while(i<n-1 && a[
-          ])
+    while(i<n-1 && a[i] <= a[i+1])
+        i++;
+
+    //if i reaches to last index that means
+    //all the elements are in increasing order
+    if(i == n-1)
+    {
+        cout<<a[n-1]<<" 1"<<endl;
+        return;
+    }
+
+    //if first element is greater than next one
+    if(i == 0)
+    {
+        while(i < n-1 && a[i] >= a[i+1])
+            i++;
+
+        //if i reaches to last index
+        if(i == n-1)
+        {
+            cout<<a[0]<<" 2"<<endl;
+            return;
+        }
+
+        //if the whole array is not in decreasing order
+        //that means it is first decreasing then increasing
+        //i.e descending roatied, so its max
+        //element will be the point breaking the order ie. i so,
+        //max will be i + 1
+        if(a[0] < a[i+1])
+        {
+            cout<<max(a[0], a[i+1])<<" 3"<<endl;
+            return;
+        }
+        else
+        {
+            cout<<max(a[0],a[i+1])<<" 4"<<endl;
+            return;
+        }
+    }
+
+    //if whole array is not increasing that means at some
+    //point it is decreasing, which makes it ascending rotated
+    //with max element as the  descending point
+    if(i < n-1 && a[0] > a[i+1])
+    {
+        cout<<max(a[i], a[0])<<" 4"<<endl;
+        return;
+    }
+
+    cout<<max(a[i],a[0])<<" 3"<<endl;
+
 }
 
 int main()

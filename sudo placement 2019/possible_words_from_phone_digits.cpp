@@ -41,11 +41,11 @@ void printWordsUtil(int D[],int curr_digit,char output[], int n)
     int i;
     if(curr_digit == n)
     {
-        cout<<output;
+        cout<<output<<" ";
         return;
     }
 
-    //try all 3 possib;e characters for current digit in D[]
+    //try all 3 possible characters for current digit in D[]
     //and recur for remaining digits
     for(int i=0; i<strlen(hashTable[D[curr_digit]]); i++)
     {

@@ -17,7 +17,7 @@ int fib(int n)
 
 int main()
 {
-    cout<<fib(4)<<endl;  //output=3 as 4th fibonacci number is 3
+    cout<<fib(9)<<endl;  //output=3 as 4th fibonacci number is 3
 
     return 0;
 }

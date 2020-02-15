@@ -1,4 +1,24 @@
 #include<iostream>
+
+using namespace std;
+int main()
+{
+    int c = 3;
+    char d = 'A';
+    cout<<"c is "<<c<<"and d is "<<d;
+
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+/*#include<iostream>
 using namespace std;
 
 int main()
@@ -16,7 +36,7 @@ int main()
     cout<< &b <<endl;
     cout<< &b[0] <<endl; */
 
-
+/*
     ///store the address of some variable
     int * ptr; ///create a pointer variable
 
@@ -25,3 +45,5 @@ int main()
     cout<< ptr <<endl; // ptr is storing &a
     cout<< &a <<endl;
 }
+
+*/

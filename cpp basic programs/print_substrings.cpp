@@ -8,7 +8,7 @@ void printSubstring(char *a)
     {
         for(int j=i;a[j]!='\0';j++)
         {
-            ///print
+            ///print all possible values [harr ek i se harr ek j tk]
             for(int k=i;k<=j;k++)
             {
                 cout<<a[k];

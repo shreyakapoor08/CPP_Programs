@@ -1,25 +1,24 @@
 #include<iostream>
-#include<algorithm>
 #include<cstring>
+#include<algorithm> //for declaring sort
 using namespace std;
 
-bool myCompare(pair<string,int> p1,pair<string,int> p2){
-    ///first = Name, second = salary
-    /// Preference Salary > Name
-
-    if(p1.second==p2.second){
+bool myCompare(pair<string,int> p1,pair<string,int> p2)
+{
+    //first = name,second=salary
+    //preference salary>name
+     if(p1.second==p2.second){
         return p1.first < p2.first;
     }
 
     return p1.second > p2.second;
 }
-
 int main()
 {
     int n,min_salary;
     pair<string,int> emp[10005];
     cin>>min_salary;
-    cin>>n;
+    cin>>n; //number of emp
 
 
     string name;
@@ -32,14 +31,29 @@ int main()
         emp[i].second = salary;
     }
 
-    sort(emp,emp+n,myCompare);
+    sort(emp,emp+n,myCompare); //sorting all the salaries
 
-    ///Print
-    for(int i=0;i<n;i++){
-        if(emp[i].second>=min_salary){
+    //print
+    for(int i=0;i<n;i++)
+    {
+        if(emp[i].second>=min_salary)
+        {
             cout<<emp[i].first<<" "<<emp[i].second<<endl;
         }
     }
-
     return 0;
 }
+
+/*
+79
+4
+Eve 78
+Bob 99
+Suzy 86
+Alice 86
+
+output
+Bob 99
+Alice 86
+Suzy 86
+*/

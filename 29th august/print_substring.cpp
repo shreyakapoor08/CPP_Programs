@@ -9,7 +9,7 @@ void printSubstrings(char *a)
         for(int j=i;a[j]!='\0';j++)
         {
             //print the string from i to j
-            for(int k=i;k<j;k++){
+            for(int k=i;k<=j;k++){
                 cout<<a[k];
             }
             cout<<endl;

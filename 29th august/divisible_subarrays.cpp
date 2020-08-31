@@ -16,7 +16,7 @@ using namespace std;
 
 #define ll long
 
-ll a[1000005], pre[1000005];
+ll a[1000005], pre[1000005]; //pre[100005] frequency sum
 
 int main()
 {
@@ -35,13 +35,13 @@ int main()
             cin>>a[i];
             sum+=a[i];
             sum %=n;
-            sum = (sum + n) % n; // for negative case
-            pre[sum]++;
+            sum = (sum + n) % n; // for negative case eg (-5+3)%5 = -2 in order to make t positive we add 5 or n to it
+            pre[sum]++; //incremented the frequency of bucket
         }
         ll ans = 0;
         for(int i=0;i<n;i++){
             ll m = pre[i];
-            ans += (m)*(m-1)/2;
+            ans += (m)*(m-1)/2; //we did mC2 which is m * m-1 / 2
         }
         cout<<ans<<endl;
     }
